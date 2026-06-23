@@ -27,3 +27,32 @@ can divy up resources between applications. Example, application A can only use 
 Union Filesspace: allows files and directories of seperate file systems, knwon as branches, to be transparently overlaid, forming a single coherent file system. contents of directories which have the same path within the merged branches  will be seen together in a single merged directory within the new, virtual filesystem.
 
 when you install docker desktop, you create a linux vm that installs a docker api and docker daemon that listens for when you run docker commands. interacts with the registries on dockerhub
+
+all data in containers are ephemeral: i.e. once containers are deleted, the data is gone (besidues volumes)
+
+volume: mapping between host machine and some docker area where we can store files we want to persist after deletion
+
+bind mount: mapping between docker container and host filesystem.
+
+docker run --interactive --tty --rm ubuntu:22.04 interactive: running shell with --tty, once we exit cotainer --rm, should remove from bash. -it i a short form of interactive and tty
+
+-e in docker run, set environment variable
+
+dockerfile: text document that contains all the command a user could call on the command line to assemble an image
+
+recipe
+
+start with operating system
+
+install langauge runtime
+
+install application dependencies
+
+set up execution environment
+
+run application
+
+paired with build context   
+
+
+dockerignore(like gitignore)
